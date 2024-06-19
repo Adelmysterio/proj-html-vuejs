@@ -88,6 +88,10 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+    a{
+        text-decoration: none;
+    }
+    
     nav.my-bg-color{
         background-color: #060607;
     }
