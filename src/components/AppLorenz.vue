@@ -208,14 +208,19 @@ h5{
 .articles-readAll {
     display: flex;
     align-items: center;
-    margin-top: 20px;
     text-decoration: none;
     color: #000;
+    transition: color 0.3s;
+}
+.articles-readAll a{
+    text-decoration: none;
+    color: inherit;
 }
 
 
 .articles-readAll:hover{
     color:#4154FF;
+    
 }
 
 .articles{
