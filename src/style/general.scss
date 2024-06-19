@@ -1,6 +1,25 @@
 @use './partials/variables.scss' as *;
 
+button {
+    border: none;
+    border-radius: 50px !important;
+    padding: 1rem 1.5rem;
+    color: white;
+    background-color: #4154ff;
+}
 
+button.no-bg {
+    background-color: transparent;
+    border: 2px solid gray;
+}
+
+button.play {
+    background-color: white;
+    border-radius: 50%;
+    color: #4154ff;
+    aspect-ratio: 1/1;
+    transform: scale(1.8);
+}
 
 .container-huge {
     max-width: 1200px;
@@ -13,4 +32,8 @@
 
 .yellow {
     color: $yellow;
+}
+
+.gray {
+    color: gray;
 }
