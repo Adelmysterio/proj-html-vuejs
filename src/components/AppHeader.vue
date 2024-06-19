@@ -39,7 +39,7 @@ export default {
 
 <template>
     <header>
-        <nav class="d-flex p-5 my-bg-color">
+        <nav class="d-flex justify-content-evenly p-5 my-bg-color">
             
             <ul>
                 <!--LOGO IMG-->
@@ -49,28 +49,33 @@ export default {
             </ul>
             
             <ul class="d-flex my-color-li">
+                
                 <!--Header link gestiti dinamicamente-->
                 <li class="me-4" v-for="headerLink in headerLink" :key="headerLink.id">
                     <a href="">{{ headerLink.title }}</a>
                 </li>
+                
                 <!--Button-->
-                <li>
+                <li class="me-4">
                     <button>Schedule a workout</button>
                 </li>
+                
                 <!--Lente font awesome-->
-                <li>
+                <li class="me-4">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </li>
+                
                 <!--Carrello font awesome-->
                 <li>
                     <i class="fa-solid fa-cart-shopping"></i>
                 </li>
             </ul>
+
         </nav>
     </header>
 </template>
 
-<style lang=scss scoped>
+<style lang="scss" scoped>
     nav.my-bg-color{
         background-color: #060607;
     }
