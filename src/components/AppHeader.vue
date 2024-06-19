@@ -2,6 +2,7 @@
 export default {
     data() {
         return {
+            activeLens: false,
             headerLink: [
             {   id: 1,
                 title: "Home",
@@ -31,7 +32,17 @@ export default {
                 title: "Store new",
                 active: false,
                 url: '#'
-            }]
+            }],
+        }
+    },
+    methods:{
+        invertInput(){
+            console.log(this.activeLens)
+            if(this.activeLens === false){
+                this.activeLens = true
+            } else {
+                this.activeLens = false
+            }
         }
     }
 }
@@ -55,19 +66,20 @@ export default {
                     <a href="">{{ headerLink.title }}</a>
                 </li>
                 
-                <!--Button-->
+                <!--Button search-->
                 <li class="me-4">
                     <button>Schedule a workout</button>
                 </li>
                 
-                <!--Lente font awesome-->
+                <!--Button lens-->
                 <li class="me-4">
-                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <button @click="invertInput()" class="my-lens my-display"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <input :class="activeLens  === false ? 'my-hidden' : 'my-visible'" type="text">
                 </li>
                 
                 <!--Carrello font awesome-->
                 <li>
-                    <i class="fa-solid fa-cart-shopping"></i>
+                    <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
                 </li>
             </ul>
 
@@ -87,11 +99,29 @@ export default {
 
         a{
             color: #757f8a;
+
+            &:hover{
+                color: white;
+            }
         }
-        
+    }
+
+    // Classi per funzionamento dell'input comparsa e scomparsa. NON inserire nello style generale scss
+    button.my-lens{
+        border: none;
+        background-color: #060607;
+        color: #757f8a;
 
         &:hover{
             color: white;
         }
+    }
+
+    input.my-hidden{
+        display: none;
+    }
+
+    input.my-visible{
+        display: inline-block;
     }
 </style>
