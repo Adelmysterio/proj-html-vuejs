@@ -52,6 +52,25 @@ return {
   </div>
 </section>
 
+<section class="workout">
+
+
+<section class="workout d-flex justify-content-center align-items-center text-center">
+
+    <div class="contenuto-workout d-flex justify-content-center align-items-center flex-column">
+       <input class="btn btn-primary" type="button" value="player">
+        <h2>Crossfit workout of the day</h2>
+        <h3>November 15th, 2019</h3>
+        <a href="#">View all videos →</a>
+    </div>
+
+</section>
+
+
+</section>
+
+
+
 <div>
     <p>lorem*3</p>
 </div>
@@ -104,5 +123,43 @@ return {
    
   }
 }
+
+
+.workout {
+  
+
+  height: 550px;
+  background-image: url('../../src/images/banner14-2x.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+  .contenuto-workout {
+    background: rgb(6,6,6);
+    background: linear-gradient(90deg, rgba(6,6,6,0.4682247899159664) 0%, rgba(233,148,224,0.6979166666666667) 100%);
+    padding: 2rem;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+
+    h2 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: yellow;
+    }
+
+    a {
+      color: white;
+      font-size: 1rem;
+    }
+  }
+
 
 </style>
