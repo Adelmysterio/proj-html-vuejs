@@ -1,5 +1,10 @@
 <script>
+import FooterCopyRight from './FooterCopyRight.vue';
+
 export default {
+    components:{
+        FooterCopyRight,
+    },
     data() {
         return {
             footerLink: [
@@ -101,6 +106,8 @@ export default {
                 </li>
             </ul>
         </nav>
+
+        <FooterCopyRight/>
     </footer>
 </template>
 
