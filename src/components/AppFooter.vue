@@ -9,7 +9,9 @@ return {
 </script>
 
 <template>
-
+    <h1>
+        Ciao mi chiamo vito
+    </h1>
 </template>
 
 <style lang=
