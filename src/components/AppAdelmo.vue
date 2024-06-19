@@ -1,5 +1,11 @@
 <script>
+import PlayButton from "./PlayButton.vue";
+import JumboContent from "./ade_section/JumboContent.vue";
 export default {
+    components: {
+        PlayButton,
+        JumboContent
+    },
     data() {
         return {
 
@@ -11,17 +17,13 @@ export default {
 <template>
     <div class="bg-img d-flex">
         <div class="container-huge d-flex align-items-center justify-content-between w-100">
-            <section class="fw-bold">
-                <p class="red">Certified fitness professional</p>
-                <h1>Take control of your health</h1>
-                <i class="fa-solid fa-stairs fa-rotate-by yellow" style="--fa-rotate-angle: 45deg;"></i>
-                <p class="gray">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                <button><i class="fa-brands fa-youtube"></i> Visit my YouTube channel</button>
-                <button class="no-bg">Buy Avada today <i class="fa-solid fa-arrow-right"></i></button>
-            </section>
-            <button class="play">
-                <i class="fa-solid fa-play"></i>
-            </button>
+            <JumboContent />
+            <PlayButton />
+        </div>
+    </div>
+    <div>
+        <div class="container-huge d-flex align-items-center justify-content-between w-100">
+
         </div>
     </div>
 </template>
@@ -33,29 +35,6 @@ export default {
     background-size: cover;
 }
 
-section {
-    color: white;
-    padding: 6rem 0;
-
-    p.red {
-        font-size: 2rem;
-    }
 
 
-    h1 {
-        font-size: 4rem;
-    }
-}
-
-.play {
-    font-size: .8rem;
-}
-
-section>i {
-    font-size: 4rem;
-}
-
-button {
-    margin-right: 1rem;
-}
 </style>
