@@ -9,7 +9,7 @@ return {
 </script>
 
 <template>
-<h1>Adelmo</h1>
+<h1></h1>
 </template>
 
 <style lang=
