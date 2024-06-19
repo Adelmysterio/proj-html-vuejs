@@ -43,6 +43,8 @@ export default {
         <nav class="d-flex justify-content-evenly text-center">
             <!--AVADA FITNESS SOCIAL-->
             <ul>
+
+                <!--logo img-->
                 <li>
                     <img src="../images/logo-200x34.png" alt="Avada Fitness logo">
                 </li>
@@ -51,8 +53,14 @@ export default {
                         Ac aliquam neque sagittis diam faubicus vitae<br> purus turpis phasellus. Pellentesque consectetur<br> amet purus ultrices mauris.
                     </p>
                 </li>
+
+                <!--link social-->
                 <li>
-                    social
+                    <a href="https://www.facebook.com/?locale=it_IT"><i class="fa-brands fa-facebook-f me-3 my-color-red"></i></a>
+                    <a href="https://x.com/?lang=it"><i class="fa-brands fa-x-twitter me-3 my-color-red"></i></a>
+                    <a href="https://www.youtube.com/?app=desktop&hl=it"><i class="fa-brands fa-youtube me-3 my-color-red"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram me-3 my-color-red"></i></a>
+                    <a href="https://it.linkedin.com/?src=go-pa&trk=sem-ga_campid.20677489327_asid.153452322614_crid.677545198980_kw.linkedin_d.c_tid.kwd-148086543_n.g_mt.e_geo.1008559&mcid=7120409760495009793&cid=&gad_source=1&gclid=CjwKCAjwg8qzBhAoEiwAWagLrDcs3ERJorzxY4XcC9FDk_n8PHbngaGEJo4fdDM_PQxrNRUllbhiaxoCqM0QAvD_BwE&gclsrc=aw.ds"><i class="fa-brands fa-linkedin-in my-color-red"></i></a>
                 </li>
             </ul>
 
@@ -64,6 +72,7 @@ export default {
                     </h6>
                 </li>
                 <li class="mb-2" v-for="footerLink in footerLink" :key="footerLink.id">
+                    <i class="fa-solid fa-chevron-right me-1"></i>
                     <a href="">{{ footerLink.textTitle }}</a>
                 </li>
             </ul>
@@ -119,6 +128,10 @@ nav{
 
 .my-color-grey{
     color: #abaaad;
+}
+
+.my-color-red{
+    color: #ce353d;
 }
 
 h6{

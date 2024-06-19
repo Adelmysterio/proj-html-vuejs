@@ -50,7 +50,7 @@ export default {
 
 <template>
     <header>
-        <nav class="d-flex justify-content-evenly p-5 my-bg-color">
+        <nav class="d-flex justify-content-evenly align-items-center p-5 my-bg-color">
             
             <ul>
                 <!--LOGO IMG-->
@@ -91,7 +91,7 @@ export default {
     a{
         text-decoration: none;
     }
-    
+
     nav.my-bg-color{
         background-color: #060607;
     }
