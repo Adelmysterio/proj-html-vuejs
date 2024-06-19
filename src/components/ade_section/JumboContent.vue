@@ -22,17 +22,24 @@ export default {
 <style lang=scss scoped>
 section {
     color: white;
-    padding: 6rem 0 15rem 0;
+    padding: 10rem 0 20rem 0;
+
+    p {
+        font-weight: normal;
+    }
 
     p.red {
         font-size: 2rem;
     }
 
-    h1 {
-        font-size: 4rem;
+    p.gray {
+        font-size: 1.8rem;
     }
 
-    
+    h1 {
+        font-size: 5rem;
+    }
+
     button {
         margin-right: 1rem;
         margin-top: 2rem;

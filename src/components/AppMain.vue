@@ -1,5 +1,5 @@
 <script>
-import AppAdelmo from "./AppAdelmo.vue";
+import AppAdelmo from "./ade_section/AppAdelmo.vue";
 import AppCiro from "./AppCiro.vue";
 import AppLorenz from "./AppLorenz.vue";
 import AppLuca from "./AppLuca.vue";

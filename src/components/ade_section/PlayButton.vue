@@ -22,6 +22,7 @@ button.play {
     aspect-ratio: 1/1;
     transform: scale(1.8);
     font-size: .8rem;
+    margin-right: 5rem;
 }
 
 </style>

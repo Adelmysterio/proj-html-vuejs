@@ -14,8 +14,9 @@ button.no-bg {
 }
 
 .container-huge {
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 0 auto;
+    color: white;
 }
 
 .red {
@@ -27,5 +28,5 @@ button.no-bg {
 }
 
 .gray {
-    color: gray;
+    color: $gray;
 }
