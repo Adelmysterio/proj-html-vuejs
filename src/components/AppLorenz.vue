@@ -9,7 +9,7 @@ data() {
 </script>
 
 <template>
-    <div >
+    <div>
         <div class="card-container">
             <div class="card-wrapper">
                 <div class="card-item container-huge">
@@ -74,6 +74,50 @@ data() {
                 </div>
             </div>
         </div>
+    </div>
+    <div class="articles-container">
+        <div class="container">
+            <div class="articles-links">
+                <h2>Latest article</h2>
+                <div class="articles-readAll">
+                    <a href="#" class="read-more">
+                        Read all articles
+                    </a>
+                    <i class="fas fa-angle-right"></i>
+                </div>
+            </div>
+            <div class="articles">
+                <article>
+                    <img src="../images/blog4-2x-400x258.jpg">
+                    <h3>
+                        The best protein shake
+                    </h3>
+                    <p>
+                        Published On: November 26th, 2019 | 2 Comments
+                    </p>
+                </article>
+                <article>
+                    <img src="../images/blog1-2x-400x258.jpg">
+                    <h3>
+                        Ultimate Cardio Workout
+                    </h3>
+                    <p>
+                        Published On: November 26th, 2019 | 0 Comments
+                    </p>
+                </article>
+                <article>
+                    <img src="../images/blog3-2x-400x258.jpg">
+                    <h3>
+                        New Juices Available
+                    </h3>
+                    <p>
+                        Published On: November 26th, 2019 | 0 Comments
+                    </p>
+                </article>
+            </div>
+            
+        </div>
+
     </div>
 </template>
 
@@ -143,6 +187,52 @@ data() {
 
 h5{
     color: #FFF941;
+}
+///////////////////////////////////////////////////////////////////////
+
+.articles-container{
+    width: 100%;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    height: 60vh;
+    padding: 100px;
+}
+
+.articles-links{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.articles-readAll {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #000;
+}
+
+
+.articles-readAll:hover{
+    color:#4154FF;
+}
+
+.articles{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+article{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+article img{
+    width: 100%;
+    padding-bottom: 1rem;
 }
 
 </style>
