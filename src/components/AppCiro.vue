@@ -17,6 +17,11 @@ return {
         text: 'Arcu eu facilisi ut quisque placerat nunc habitant. Magna semper mauris, venenatis, leo integer sit pellentesque.' ,
         link: 'Tune up your workouts',
     },
+    ],
+    ArticleCard:[
+                { id: 0, title: 'Thighs & glute workout', image: 'https://avada.website/fitness/wp-content/uploads/sites/130/2019/11/video2@2x.jpg', link: 'Increase your mobility' },
+                { id: 1, title: 'Lift, firm & perk up', image: 'https://avada.website/fitness/wp-content/uploads/sites/130/2019/11/video7@2x.jpg', link: 'Feel young again' },
+                { id: 2, title: 'Slim & trim your waist', image: 'https://avada.website/fitness/wp-content/uploads/sites/130/2019/12/video9@2x.jpg', link: 'Shed those extra pounds' },
     ]
         };
     }
@@ -25,44 +30,51 @@ return {
 
 <template>
 
-<div class="container">
-    <div class="row">
-        <div class="workouts d-flex w-100">
-            <img src="../images/service15-2x.jpg" alt="service15" id="service" class="col-6">
-            <article class="artup d-flex flex-column"
-            v-for="item in ArticleData"
-            >
-            <p class="link">{{ item.link }}</p>
-            <p class="title">{{ item.title }}</p>
-            <p class="text"> {{ item.text }}</p>
-                <button class="bottone btn btn-danger text-light">Visit my YouTube channel</button>
-            </article>
-        </div>
-        <div class="playlists d-flex col-5 w-100 flex-column">
-            <div class="video-up">
-                <h2>Feautred playlists</h2>
-            </div>
-            <div class="video-container">
-                <article class="video"
-                v-for="item in CardData" :key="item.id"
+<div class="container-fluid">
+    <div class="container-huge">
+        <div class="row">
+            <div class="workouts d-flex w-100">
+                <img src="../images/service15-2x.jpg" alt="service15" id="service" class="col-6">
+                <article class="artup d-flex flex-column"
+                v-for="item in ArticleData"
                 >
-                    <img :src="item.image" alt="" class="test">
-                    <h3>{{ item.title }}</h3>
-                    <a :href="item.link">{{ item.link }}</a>
+                <p class="link">{{ item.link }}</p>
+                <p class="title">{{ item.title }}</p>
+                <p class="text"> {{ item.text }}</p>
+                    <button class="bottone btn btn-danger text-light">Visit my YouTube channel</button>
                 </article>
             </div>
+            <div class="playlists d-flex col-5 w-100 flex-column">
+                <div class="video-up">
+                    <h2>Feautred playlists</h2>
+                </div>
+                <div class="video-container">
+                    <article class="video"
+                    v-for="item in CardData" :key="item.id"
+                    >
+                        <img :src="item.image" alt="" class="test">
+                        <h3>{{ item.title }}</h3>
+                        <a :href="item.link">{{ item.link }}</a>
+                    </article>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="row">
-        <section class="up"></section>
-        <section class="low">
-            <article>
-
-            </article>
-        </section>
+        <div class="row">
+                <section class="up">
+                    <h3>Join our mailing list today</h3>
+                    <h1>Insider offers & flash sales in your inbox every week</h1>
+                    <input type="email" placeholder="insert your email....*">
+                    <button class="btn btn-primary"> Subscribe</button>
+                    <p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus dolor sit amet, consectetur adipiscing elit sed porttitor lectus.</p>
+                </section>
+            <section class="low">
+                <article>
+    
+                </article>
+            </section>
+        </div>
     </div>
-</div>
-
 </template>
 
 <style lang=
@@ -80,10 +92,11 @@ scoped>
     }
 }
 .up{
-    width: 100%;
-    height: 200px;
+    height: 1000px;
+    background-size: contain;
+    background-repeat: no-repeat;
     background-position: center;
-    background-image: url(../images/banner1@2x.jpg);
+    background-image: url('https://avada.website/fitness/wp-content/uploads/sites/130/2019/11/banner1@2x.jpg');
 }
 #service{
 }
