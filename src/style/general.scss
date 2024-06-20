@@ -1,6 +1,32 @@
-@import "~@fortawesome/fontawesome-free/css/all.css";
+@use './partials/variables.scss' as *;
+
+button {
+    border: none;
+    border-radius: 50px !important;
+    padding: 1rem 1.5rem;
+    color: white;
+    background-color: #4154ff;
+}
+
+button.no-bg {
+    background-color: transparent;
+    border: 2px solid gray;
+}
 
 .container-huge {
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 0 auto;
+    color: white;
+}
+
+.red {
+    color: $red;
+}
+
+.yellow {
+    color: $yellow;
+}
+
+.gray {
+    color: $gray;
 }
