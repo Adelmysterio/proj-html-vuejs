@@ -32,7 +32,7 @@ export default {
             <figure class="single-card">
                 <PlayButton />
             </figure>
-            <section class="caption d-flex flex-column" v-for="item in ArticleData">
+            <section class="caption d-flex flex-column justify-content-center" v-for="item in ArticleData">
                 <p class="link">{{ item.link }}</p>
                 <h4 class="title">{{ item.title }}</h4>
                 <p class="text gray"> {{ item.text }}</p>
@@ -40,13 +40,13 @@ export default {
             </section>
         </div>
         <div class="playlist container-huge d-flex flex-column">
-            <h2>Feautred playlists</h2>
+            <h2 class="mb-5">Feautred playlists</h2>
             <div class="wrapper">
                 <article v-for="item in CardData" :key="item.id" class="video-container">
-                    <div class="video" :style="{ backgroundImage: 'url(' + item.image + ')' }" :key="item.id">
+                    <div class="video mb-5" :style="{ backgroundImage: 'url(' + item.image + ')' }" :key="item.id">
                         <PlayButton />
                     </div>
-                    <section>
+                    <section class="text-center fw-bold">
                         <h3>{{ item.title }}</h3>
                         <a :href="item.link">{{ item.link }}</a>
                     </section>
@@ -194,5 +194,9 @@ button.bg-red {
     width: fit-content;
     font-size: 1.2rem;
     font-weight: bold;
+}
+
+a {
+    text-decoration: none;
 }
 </style>
