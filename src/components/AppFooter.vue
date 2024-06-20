@@ -76,9 +76,9 @@ export default {
                         Recent posts
                     </h6>
                 </li>
-                <li class="mb-2" v-for="footerLink in footerLink" :key="footerLink.id">
+                <li class="mb-2 my-li-a-color-hover" v-for="footerLink in footerLink" :key="footerLink.id">
                     <i class="fa-solid fa-chevron-right me-1"></i>
-                    <a href="">{{ footerLink.textTitle }}</a>
+                    <a class="my-li-a-color-hover" href="">{{ footerLink.textTitle }}</a>
                 </li>
             </ul>
 
@@ -112,6 +112,12 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+.my-li-a-color-hover{
+    &:hover{
+        color: #4154ff;
+    }
+}
+
 a{
     text-decoration: none;
 }

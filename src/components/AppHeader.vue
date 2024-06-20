@@ -29,7 +29,7 @@ export default {
             },
             {
                 id: 5,
-                title: "Store new",
+                title: "Store",
                 active: false,
                 url: '#'
             }
@@ -65,6 +65,10 @@ export default {
                 <!--Header link gestiti dinamicamente-->
                 <li class="me-4" v-for="headerLink in headerLink" :key="headerLink.id">
                     <a href="">{{ headerLink.title }}</a>
+                </li>
+
+                <li>
+                    
                 </li>
                 
                 <!--Button search-->
