@@ -43,7 +43,7 @@ export default {
             <h2 class="mb-5">Feautred playlists</h2>
             <div class="wrapper">
                 <article v-for="item in CardData" :key="item.id" class="video-container">
-                    <div class="video mb-5" :style="{ backgroundImage: 'url(' + item.image + ')' }" :key="item.id">
+                    <div class="video single-card mb-5" :style="{ backgroundImage: 'url(' + item.image + ')' }" :key="item.id">
                         <PlayButton />
                     </div>
                     <section class="text-center fw-bold">
