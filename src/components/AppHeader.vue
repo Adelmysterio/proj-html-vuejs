@@ -4,42 +4,43 @@ export default {
         return {
             activeLens: false,
             headerLink: [
-            {   id: 1,
-                title: "Home",
-                active: false,
-                url: '#'
-            },
-            {
-                id: 2,
-                title: "Services",
-                active: false,
-                url: '#'
-            },
-            {
-                id: 3,
-                title: "About",
-                active: false,
-                url: '#'
-            },
-            {
-                id: 4,
-                title: "Blog",
-                active: false,
-                url: '#'
-            },
-            {
-                id: 5,
-                title: "Store",
-                active: false,
-                url: '#'
-            }
+                {
+                    id: 1,
+                    title: "Home",
+                    active: false,
+                    url: '#'
+                },
+                {
+                    id: 2,
+                    title: "Services",
+                    active: false,
+                    url: '#'
+                },
+                {
+                    id: 3,
+                    title: "About",
+                    active: false,
+                    url: '#'
+                },
+                {
+                    id: 4,
+                    title: "Blog",
+                    active: false,
+                    url: '#'
+                },
+                {
+                    id: 5,
+                    title: "Store",
+                    active: false,
+                    url: '#'
+                }
             ],
         }
     },
-    methods:{
-        invertInput(){
+    methods: {
+        invertInput() {
             console.log(this.activeLens)
-            if(this.activeLens === false){
+            if (this.activeLens === false) {
                 this.activeLens = true
             } else {
                 this.activeLens = false
@@ -50,38 +51,36 @@ export default {
 </script>
 
 <template>
-    <header>
-        <nav class="d-flex justify-content-evenly align-items-center p-5 my-bg-color">
+    <header class="my-bg-color">
+        <nav class="d-flex justify-content-between container-huge align-items-center">
+
+            <!--LOGO IMG-->
+
+            <img src="../images/logo-200x34.png" alt="Avada Fitness logo">
             
-            <ul>
-                <!--LOGO IMG-->
-                <li>
-                    <img src="../images/logo-200x34.png" alt="Avada Fitness logo">
-                </li>
-            </ul>
-            
-            <ul class="d-flex my-color-li">
-                
+            <ul class="d-flex align-items-center my-color-li">
+
                 <!--Header link gestiti dinamicamente-->
                 <li class="me-4" v-for="headerLink in headerLink" :key="headerLink.id">
                     <a href="">{{ headerLink.title }}</a>
                 </li>
 
                 <li>
-                    
+
                 </li>
-                
+
                 <!--Button search-->
                 <li class="me-4">
                     <button>Schedule a workout</button>
                 </li>
-                
+
                 <!--Button lens-->
                 <li class="me-4">
-                    <button @click="invertInput()" class="my-lens my-display"><i class="fa-solid fa-magnifying-glass"></i></button>
-                    <input :class="activeLens  === false ? 'my-hidden' : 'my-visible'" type="text">
+                    <button @click="invertInput()" class="my-lens my-display"><i
+                            class="fa-solid fa-magnifying-glass"></i></button>
+                    <input :class="activeLens === false ? 'my-hidden' : 'my-visible'" type="text">
                 </li>
-                
+
                 <!--Carrello font awesome-->
                 <li>
                     <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
@@ -96,44 +95,48 @@ export default {
 @use '../style/partials/mixins' as*;
 @use '../style/partials/variables' as*;
 
-    a{
-        text-decoration: none;
+nav {
+    padding: 1rem 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.my-bg-color {
+    background-color: $bg-black;
+}
+
+ul.my-color-li {
+    li {
+        color: $color-grey;
     }
 
-    nav.my-bg-color{
-        background-color: $bg-black;
-    }
-
-    ul.my-color-li{
-        li{
-            color: $color-grey;
-        }
-
-        a{
-            color: $color-grey;
-
-            &:hover{
-                color: white;
-            }
-        }
-    }
-
-    // Classi per funzionamento dell'input comparsa e scomparsa. NON inserire nello style generale scss
-    button.my-lens{
-        border: none;
-        background-color: $bg-black;
+    a {
         color: $color-grey;
 
-        &:hover{
+        &:hover {
             color: white;
         }
     }
+}
 
-    input.my-hidden{
-        display: none;
-    }
+// Classi per funzionamento dell'input comparsa e scomparsa. NON inserire nello style generale scss
+button.my-lens {
+    border: none;
+    background-color: $bg-black;
+    color: $color-grey;
 
-    input.my-visible{
-        display: inline-block;
+    &:hover {
+        color: white;
     }
+}
+
+input.my-hidden {
+    display: none;
+}
+
+input.my-visible {
+    display: inline-block;
+}
 </style>
