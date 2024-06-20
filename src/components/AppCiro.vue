@@ -96,9 +96,12 @@ return {
                 </section>
             <section class="low">
                 <article
-                v-for="item in ArticleCard">
-                <p
-                v-html="">{{ item.icon }}</p>
+                v-for="item in ArticleCard" :key="item.id">
+                <i :class="item.icon" id="mammt"></i>
+                <p>{{ item.title }}</p>
+                <p class="text-warning">{{ item.ywtitle }}</p>
+                <p>{{ item.text}}</p>
+                <a :href="item.link"></a>
                 </article>
             </section>
         </div>
@@ -108,10 +111,24 @@ return {
 <style lang=
 scss
 scoped>
+#mammt{
+    width: 100px;
+}
 .low{
+    display: flex;
     width: 100%;
     background-color: #060607;
     color: white;
+    article{
+        width: calc(80% / 3);
+        font-weight: bold;
+        text-align: center;
+        padding: 3rem;
+        align-items: center;
+        justify-content: center;
+        border: 3px solid #4154ff;
+        margin: 2rem;
+    }
 }
 .video-container{
     width: 100%;
