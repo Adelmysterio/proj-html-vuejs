@@ -4,13 +4,15 @@ import AppCiro from "./AppCiro.vue";
 import TrainingAndArticles from "./TrainingAndArticles.vue";
 import BannerAndSponsors from "./BannerAndSponsors.vue";
 import Events from "./Events.vue";
+import FloatingButtons from "./FloatingButtons.vue";
 export default {
     components: {
         JumboSection,
         AppCiro,
         TrainingAndArticles,
         BannerAndSponsors,
-        Events
+        Events,
+        FloatingButtons,
 
     },
     data() {
@@ -26,11 +28,13 @@ export default {
         <JumboSection />
         <AppCiro />
         <TrainingAndArticles />
+        <FloatingButtons />
         <Events />
         <BannerAndSponsors />
     </main>
 </template>
 
 <style lang="scss" scoped>
+
 
 </style>
