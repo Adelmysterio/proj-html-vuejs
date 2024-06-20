@@ -1,13 +1,13 @@
 <script>
 import JumboSection from "./jumbo/JumboSection.vue";
-import AppCiro from "./AppCiro.vue";
+import VideoAndCallToAction from "./VideoAndCallToAction.vue";
 import TrainingAndArticles from "./TrainingAndArticles.vue";
 import BannerAndSponsors from "./BannerAndSponsors.vue";
 import Events from "./Events.vue";
 export default {
     components: {
         JumboSection,
-        AppCiro,
+        VideoAndCallToAction,
         TrainingAndArticles,
         BannerAndSponsors,
         Events
@@ -24,7 +24,7 @@ export default {
 <template>
     <main>
         <JumboSection />
-        <AppCiro />
+        <VideoAndCallToAction />
         <TrainingAndArticles />
         <Events />
         <BannerAndSponsors />

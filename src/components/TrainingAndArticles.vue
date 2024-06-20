@@ -127,7 +127,6 @@ data() {
 .card-container{
     background-color: #060607;
     width: 100%;
-    
 }
 
 .card-item{
@@ -180,7 +179,7 @@ data() {
 }
 
 .card-wrapper{
-   padding: 3rem 0;
+   padding: 10rem 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
