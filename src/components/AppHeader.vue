@@ -32,7 +32,8 @@ export default {
                 title: "Store new",
                 active: false,
                 url: '#'
-            }],
+            }
+            ],
         }
     },
     methods:{

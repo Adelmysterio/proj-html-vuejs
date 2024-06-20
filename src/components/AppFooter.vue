@@ -99,7 +99,7 @@ export default {
                 </li>
                 <li>
                     <strong>
-                        <a href="">
+                        <a href="https://www.microsoft.com/it-it/microsoft-365/outlook/email-and-calendar-software-microsoft-outlook?market=it">
                             Email: info@your-company.com
                         </a>
                     </strong>
