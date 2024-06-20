@@ -8,17 +8,36 @@ export default {
     return {
 
     }
-  }
+  },
+  
 }
+document.addEventListener("DOMContentLoaded", function () {
+    const scrollElements = document.querySelectorAll('.hidden-scroll');
+    const checkVisibility = () => {
+        scrollElements.forEach((element) => {
+            const rect = element.getBoundingClientRect();
+            if (rect.top <= (window.innerHeight || document.documentElement.clientHeight) && rect.bottom >= 0){
+                setTimeout(() =>{
+                    element.classList.add('visible-scroll');
+                }, 200);
+                
+            }
+        });
+    };
+    window.addEventListener('scroll', checkVisibility);
+    
+    
+    checkVisibility();
+});
 </script>
 
 <template>
   <section class="buy-avada ">
 
     <div class="contenuto-banner d-flex  justify-content-center align-items-center flex-column">
-      <section>
+      <section class="hidden-scroll">
         <h2 class="">"I've failed over and over again in my life. And that is why I succeded."</h2>
-        <i class="fa-solid fa-stairs fa-rotate-by yellow" style="--fa-rotate-angle: 45deg;"></i>
+        <i class="fa-solid fa-stairs fa-rotate-by yellow " style="--fa-rotate-angle: 45deg;"></i>
         <p>Arcu auctor gravida nisl, congue sit nisi tincidunt eget proin. In lacinia lacus donec sed massa in ipsum
           eros, tristique. Gravida suspendisse etiam in iaculis</p>
         <button>Buy Avada Today</button>
@@ -28,7 +47,7 @@ export default {
   </section>
 
   <section class="sponsors">
-    <div class="container-fluid container-huge">
+    <div class="container-fluid container-huge hidden-scroll">
       <div class="row">
         <div class="col-lg-3 col-md-6 col-sm-12 text-center mb-4">
           <img src="../images/sponsor-1-2x-200x103.png" alt="Yoga Studio Logo" class="img-fluid mb-3">
@@ -64,7 +83,7 @@ export default {
 
   <section class="workout">
 
-    <section class="workout d-flex justify-content-center align-items-center text-center">
+    <section class="workout d-flex justify-content-center align-items-center text-center hidden-scroll">
 
       <div class="contenuto-workout d-flex justify-content-center align-items-center flex-column">
         <div class="mb-5">
@@ -182,4 +201,19 @@ export default {
 .buy-avada button:hover{
   background-color: #FF414B;
 }
+
+/**  Animations  */
+
+
+.hidden-scroll {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.visible-scroll {
+    opacity: 1;
+    visibility: visible;
+}
+
 </style>

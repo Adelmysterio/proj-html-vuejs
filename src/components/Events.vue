@@ -32,14 +32,32 @@ export default {
 
     }
 };
+document.addEventListener("DOMContentLoaded", function () {
+    const scrollElements = document.querySelectorAll('.hidden-scroll');
+    const checkVisibility = () => {
+        scrollElements.forEach((element) => {
+            const rect = element.getBoundingClientRect();
+            if (rect.top <= (window.innerHeight || document.documentElement.clientHeight) && rect.bottom >= 0){
+                setTimeout(() =>{
+                    element.classList.add('visible-scroll');
+                }, 200);
+                
+            }
+        });
+    };
+    window.addEventListener('scroll', checkVisibility);
+    
+    
+    checkVisibility();
+});
 </script>
 
 <template>
     <div class="bg-gradient">
-        <div class="wrapper container-huge">
+        <div class="wrapper container-huge hidden-scroll">
             <h2>Sign-Up Now! For the next fitness events!</h2>
             <div class="event" v-for="(event, index) in events" :key="index">
-                <article :style="{ backgroundImage: 'url(' + event.image + ')' }" class="single-card">
+                <article :style="{ backgroundImage: 'url(' + event.image + ')' }" class="single-card ">
                     <section>
                         <h3>{{ event.event_name }}</h3>
                         <p>{{ event.location }}</p>
@@ -101,4 +119,17 @@ article.single-card:hover{
     transform: scale(1.1);
 }
 
+/**  Animations  */
+
+
+.hidden-scroll {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.visible-scroll {
+    opacity: 1;
+    visibility: visible;
+}
 </style>

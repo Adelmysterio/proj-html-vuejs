@@ -6,13 +6,31 @@ data() {
         }
     },
 }
+document.addEventListener("DOMContentLoaded", function () {
+    const scrollElements = document.querySelectorAll('.hidden-scroll');
+    const checkVisibility = () => {
+        scrollElements.forEach((element) => {
+            const rect = element.getBoundingClientRect();
+            if (rect.top <= (window.innerHeight || document.documentElement.clientHeight) && rect.bottom >= 0){
+                setTimeout(() =>{
+                    element.classList.add('visible-scroll');
+                }, 200);
+                
+            }
+        });
+    };
+    window.addEventListener('scroll', checkVisibility);
+    
+    
+    checkVisibility();
+});
 </script>
 
 <template>
     <div>
         <div class="card-container">
-            <div class="card-wrapper container-huge">
-                <div class="card-item">
+            <div class="card-wrapper container-huge hidden-scroll">
+                <div class="card-item ">
                     <div class="card-content">
                         <i class="card-icon fas fa-stopwatch"></i>
                         <h4>
@@ -77,7 +95,7 @@ data() {
     </div>
     <div class="container-huge">
         <div class="contenitore">
-            <div class="articles-links">
+            <div class="articles-links hidden-scroll">
                 <h2>Latest article</h2>
                 <div class="articles-readAll">
                     <a href="#" class="read-more">
@@ -86,7 +104,7 @@ data() {
                     <i class="fas fa-angle-right"></i>
                 </div>
             </div>
-            <div class="articles">
+            <div class="articles hidden-scroll">
                 <article>
                     <img src="../images/blog4-2x-400x258.jpg">
                     <h3>
@@ -179,7 +197,7 @@ data() {
 }
 
 .card-wrapper{
-   padding: 10rem 0;
+    padding: 10rem 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -242,5 +260,19 @@ article{
 article img{
     width: 100%;
     padding-bottom: 1rem;
+}
+
+/**  Animations  */
+
+
+.hidden-scroll {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.visible-scroll {
+    opacity: 1;
+    visibility: visible;
 }
 </style>
