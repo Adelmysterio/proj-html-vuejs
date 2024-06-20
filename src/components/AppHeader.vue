@@ -5,23 +5,30 @@ export default {
             activeLens: false,
             headerLink: [
                 {
-                    id: 1,
+                    id: 0,
                     title: "Home",
                     active: false,
                     icons: false,
                     url: '#'
                 },
                 {
-                    id: 2,
+                    id: 1,
                     title: "Services",
-                    active: false,
+                    active: true,
+                    icons: true,
+                    url: '#'
+                },
+                {
+                    id: 2,
+                    title: "About",
+                    active: true,
                     icons: true,
                     url: '#'
                 },
                 {
                     id: 3,
-                    title: "About",
-                    active: false,
+                    title: "Videos",
+                    active: true,
                     icons: true,
                     url: '#'
                 },
@@ -34,8 +41,8 @@ export default {
                 },
                 {
                     id: 5,
-                    title: "Store",
-                    active: false,
+                    title: "Store new",
+                    active: true,
                     icons: true,
                     url: '#'
                 },
@@ -52,61 +59,76 @@ export default {
             }
         }
     }
+
 }
 </script>
 
 <template>
-    <header class="my-bg-color">
-        <nav class="d-flex justify-content-between container-huge align-items-center">
-
-            <!--LOGO IMG-->
-
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary my-bg-color p-3">
             <img src="../images/logo-200x34.png" alt="Avada Fitness logo">
-            
-            <ul class="d-flex align-items-center my-color-li">
-
-                <!--Header link gestiti dinamicamente-->
-                <li class="me-4" v-for="headerLink in headerLink" :key="headerLink.id">
-                    <a href="">{{ headerLink.title }}</a> <i class="fa-solid fa-chevron-down"></i>
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                <li class="nav-item dropdown" v-for="headerLink in headerLink" :key="headerLink.id">
+                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        {{ headerLink.title }}
+                    </a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a class="dropdown-item" href="#">
+                        All Services
+                    </a>
                 </li>
-                <!--:class="headerLink.icons ==="-->
-                <!--Button search-->
+                <li>
+                    <a class="dropdown-item" href="#">
+                        Simple Product
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="#">
+                        All playlist
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="#">
+                        Dropdown
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="#">
+                        All Playlist
+                    </a>
+                </li>
+            </ul>
+                </li>
+            </ul>
+            <form class="d-flex" role="search">
                 <li class="me-4">
                     <button>Schedule a workout</button>
                 </li>
-
-                <!--Button lens-->
-                <li class="me-4 d-flex align-items-center">
-                    <button @click="invertInput()" class="my-lens my-display">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
-                    <input :class="activeLens === false ? 'my-hidden' : 'my-visible'" type="text">
-                </li>
-
-                <!--Carrello font awesome-->
-                <li>
-                    <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
-                </li>
-            </ul>
-
-        </nav>
+                <button @click="invertInput()" class="my-lens my-display">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+            <input :class="activeLens === false ? 'my-hidden' : 'my-visible'" type="text">
+            <span><i class="fa-solid fa-cart-shopping my-color"></i></span>
+        </div>
+    </div>
+</nav>
     </header>
 </template>
 
 <style lang="scss" scoped>
 @use '../style/partials/mixins' as*;
 @use '../style/partials/variables' as*;
-
-nav {
-    padding: 1rem 0;
-}
-
-a {
-    text-decoration: none;
-}
+@use '../style/general.scss' as*;
 
 .my-bg-color {
-    background-color: $bg-black;
+    background-color: $bg-black!important;
 }
 
 ul.my-color-li {
@@ -123,7 +145,6 @@ ul.my-color-li {
     }
 }
 
-// Classi per funzionamento dell'input comparsa e scomparsa. NON inserire nello style generale scss
 button.my-lens {
     border: none;
     background-color: $bg-black;
@@ -145,5 +166,9 @@ input.my-visible {
 input{
     border-radius: 1rem;
     width: 200px;
+}
+
+i.my-color{
+    color: white;
 }
 </style>

@@ -113,6 +113,7 @@ export default {
 <style lang="scss" scoped>
 @use '../style/partials/mixins' as*;
 @use '../style/partials/variables' as*;
+@use '../style/general.scss' as*;
 
 footer{
     font-size: 1.1rem;
@@ -122,10 +123,6 @@ footer{
     &:hover{
         color: $color-blue;
     }
-}
-
-a{
-    text-decoration: none;
 }
 
 footer{
