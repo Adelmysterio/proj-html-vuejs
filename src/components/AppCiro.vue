@@ -19,9 +19,31 @@ return {
     },
     ],
     ArticleCard:[
-                { id: 0, title: 'Thighs & glute workout', image: 'https://avada.website/fitness/wp-content/uploads/sites/130/2019/11/video2@2x.jpg', link: 'Increase your mobility' },
-                { id: 1, title: 'Lift, firm & perk up', image: 'https://avada.website/fitness/wp-content/uploads/sites/130/2019/11/video7@2x.jpg', link: 'Feel young again' },
-                { id: 2, title: 'Slim & trim your waist', image: 'https://avada.website/fitness/wp-content/uploads/sites/130/2019/12/video9@2x.jpg', link: 'Shed those extra pounds' },
+                { 
+                id: 0,
+                icon: 'fa-regular fa-stopwatch-20',
+                title: 'Team training',
+                ywtitle:'Find a partner',
+                text: 'Vestibulum, curabitur eu sem nibh ultrices sit nulla adipiscing. Nisl sit fames amet senectus eget sed duis vehicula. Tristique.', 
+                link: 'Find a partner >',
+            },
+                {
+                id: 1,
+                icon: 'fa-regular fa-dumbbell',
+                title: 'Crossfit workout',
+                ywtitle:'Push your limits',
+                text: 'Vestibulum, curabitur eu sem nibh ultrices sit nulla adipiscing. Nisl sit fames amet senectus eget sed duis vehicula. Tristique.', 
+                link: 'Learn about Crossfit >', 
+            },
+                {
+                id: 2,
+                icon: 'fa-regular fa-hotdog',
+                title: 'Weight loss plant',
+                ywtitle:'Shed those pounds',
+                text: 'At laoreet senectus volutpat diam vel sed sed amet pellentesque. Lobortis ut aliquam risus purus. A tellus ut etiam.', 
+                link: 'Schedule a workout >', 
+            },
+
     ]
         };
     }
@@ -62,15 +84,21 @@ return {
     </div>
         <div class="row">
                 <section class="up">
-                    <h3>Join our mailing list today</h3>
-                    <h1>Insider offers & flash sales in your inbox every week</h1>
-                    <input type="email" placeholder="insert your email....*">
-                    <button class="btn btn-primary"> Subscribe</button>
-                    <p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus dolor sit amet, consectetur adipiscing elit sed porttitor lectus.</p>
+                    <section class="into-up">
+                        <h3 class="text-danger">Join our mailing list today</h3>
+                        <h1>Insider offers & flash sales in your inbox every week</h1>
+                        <div class="form">
+                            <input type="email" placeholder="insert your email....*">
+                            <button class="sub btn btn-primary"> Subscribe</button>
+                        </div>
+                        <p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus dolor sit amet, consectetur adipiscing elit sed porttitor lectus.</p>
+                    </section>
                 </section>
             <section class="low">
-                <article>
-    
+                <article
+                v-for="item in ArticleCard">
+                <p
+                v-html="">{{ item.icon }}</p>
                 </article>
             </section>
         </div>
@@ -80,7 +108,11 @@ return {
 <style lang=
 scss
 scoped>
-
+.low{
+    width: 100%;
+    background-color: #060607;
+    color: white;
+}
 .video-container{
     width: 100%;
     display: flex;
@@ -92,11 +124,39 @@ scoped>
     }
 }
 .up{
-    height: 1000px;
-    background-size: contain;
+    width: 100%;
+    color: white;
+    height: 700px;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-image: url('https://avada.website/fitness/wp-content/uploads/sites/130/2019/11/banner1@2x.jpg');
+    .into-up{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 4rem;
+        margin: 4rem;
+        width: 40%;
+        font-size: 2rem;
+        font-weight: bold;
+        .form{
+            display: flex;
+            align-items: center;
+        }
+        .sub{
+            margin-left: 2rem;
+            padding: 1rem;
+            align-self: center;
+            width: 30%;
+        }
+        p{
+            font-size: 1.2rem;
+            color: #98939f;
+            padding: 1.5rem;
+            font-weight: lighter;
+        }
+    }
 }
 #service{
 }
