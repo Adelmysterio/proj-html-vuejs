@@ -14,7 +14,7 @@ return {
     
   <div class="contenuto-banner d-flex  justify-content-center align-items-center flex-column">
       <h2 class="">"I've failed over and over again in my life. And that is why I succeded."</h2>
-      <h3>i</h3>
+      <i class="fa-solid fa-stairs fa-rotate-by yellow" style="--fa-rotate-angle: 45deg;"></i>
       <p>Arcu auctor gravida nisl, congue sit nisi tincidunt eget proin. In lacinia lacus donec sed massa in ipsum eros, tristique. Gravida suspendisse etiam in iaculis</p>
       <input class="btn btn-primary" type="button" value="Buy Avada Today >">
   </div>
@@ -26,25 +26,25 @@ return {
     <div class="row">
       <div class="col-lg-3 col-md-6 col-sm-12 text-center mb-4">
         <img src="../images/sponsor-1-2x-200x103.png" alt="Yoga Studio Logo" class="img-fluid mb-3">
-        <p>i</p>
+        <p><i class="fa-solid fa-stairs fa-rotate-by blue" style="--fa-rotate-angle: 45deg;"></i></p>
         <p>Tristique aliquam in nullam habitasse nunc, amet vel consectetur. Nulla in suspendisse dolor, aliquet.</p>
         <a href="#">Visit Yoga Studio ></a>
       </div>
       <div class="col-lg-3 col-md-6 col-sm-12 text-center mb-4">
         <img src="../images/sponsor-2-2x-200x103.png" alt="Fitness Center Logo" class="img-fluid mb-3">
-        <p>i</p>
+        <p><i class="fa-solid fa-stairs fa-rotate-by blue" style="--fa-rotate-angle: 45deg;"></i></p>
         <p>Feugiat etiam dui mauris pharetra mauris sed pharetra. Convallis sapien ornare cras faucibus nulla porta dui a.</p>
         <a href="#">Join Fitness Center ></a>
       </div>
       <div class="col-lg-3 col-md-6 col-sm-12 text-center mb-4">
         <img src="../images/sponsor-3-2x-200x103.png" alt="Fitness Club Logo" class="img-fluid mb-3">
-        <p>i</p>
+        <p><i class="fa-solid fa-stairs fa-rotate-by blue" style="--fa-rotate-angle: 45deg;"></i></p>
         <p>Nisl at quam adipiscing montes, nec, adipiscing commodo aliquam tincidunt. Ligula in habitant et sagittis imperdiet.</p>
         <a href="#">Learn about FC ></a>
       </div>
       <div class="col-lg-3 col-md-6 col-sm-12 text-center mb-4">
         <img src="../images/sponsor-4-2x-200x103.png" alt="Power Gym Logo" class="img-fluid mb-3">
-        <p>i</p>
+        <p><i class="fa-solid fa-stairs fa-rotate-by blue" style="--fa-rotate-angle: 45deg;"></i></p>
         <p>Proin in viverra maecenas et mattis ut nibh enim. Gravida ultricies mi porta lacus. Et posuere velit sed nec eleifend.</p>
         <a href="#">Visit Power Gym ></a>
       </div>
@@ -161,5 +161,12 @@ return {
     }
   }
 
+  .yellow {
+    color: yellow
+  }
+
+  .blue {
+    color: blue;
+  }
 
 </style>
