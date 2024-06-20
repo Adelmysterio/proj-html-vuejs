@@ -36,7 +36,7 @@ export default {
 
 <template>
     <div class="bg-img d-flex">
-        <div class="container-huge d-flex align-items-center justify-content-between w-100">
+        <div class="container-huge d-flex align-items-center justify-content-between w-75">
             <JumboContent />
             <PlayButton />
         </div>
