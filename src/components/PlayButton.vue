@@ -23,4 +23,8 @@ button.play {
     transform: scale(1.8);
     font-size: .8rem;
 }
+
+button:hover{
+    color:#FF414B;
+}
 </style>
