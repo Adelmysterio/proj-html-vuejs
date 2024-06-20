@@ -1,8 +1,8 @@
 <script>
-import AppAdelmo from "./ade_section/AppAdelmo.vue";
+import AppAdelmo from "./ade_section/JumboSection.vue";
 import AppCiro from "./AppCiro.vue";
-import AppLorenz from "./AppLorenz.vue";
-import AppLuca from "./AppLuca.vue";
+import AppLorenz from "./TrainingAndArticles.vue";
+import AppLuca from "./BannerAndSponsors.vue";
 export default {
     components: {
         AppAdelmo,
