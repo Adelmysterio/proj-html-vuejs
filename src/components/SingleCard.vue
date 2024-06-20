@@ -30,4 +30,9 @@ export default {
 <style lang="scss" scoped>
 @use '../style/partials/variables.scss' as *;
 
+article {
+    position: relative;
+    top: -100px;
+}
+
 </style>
