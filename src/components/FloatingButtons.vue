@@ -33,6 +33,22 @@
     }
 }
 
+@keyframes moveRightLeft {
+    0% {
+        transform: translateX(70px);
+        opacity: 1;
+    }
+    50% {
+        transform: translateX(-70px);
+        opacity: 1;
+    }
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
 .icona-avada, .icona-cart {
     position: fixed;
     width: 70px;
@@ -62,8 +78,12 @@
     }
 }
 
-    .icona-avada:hover i, .icona-cart:hover i {
-    animation: moveLeftRight 0.4s forwards;
+    .icona-avada:hover i{
+        animation: moveLeftRight 0.4s forwards;
+    }
+
+    .icona-cart:hover i{
+        animation: moveRightLeft 0.4s forwards;
     }
 
     .icona-cart {
