@@ -6,6 +6,10 @@ button {
     padding: 1rem 1.5rem;
     color: white;
     background-color: #4154ff;
+    background-color: #4154ff;
+    &:hover {
+        background-color: #ff414b;
+    }
 }
 
 button.no-bg {

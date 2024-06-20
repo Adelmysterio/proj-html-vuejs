@@ -65,48 +65,58 @@ export default {
 
 <template>
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary my-bg-color p-3">
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary my-bg-color p-3 d-flex justify-content-center">
             <img src="../images/logo-200x34.png" alt="Avada Fitness logo">
+                <!--Img e botton fluid a scomparsa-->
                 <div class="container-fluid">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                <div class="collapse navbar-collapse" id="navbarScroll">
-            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                <li class="nav-item dropdown" v-for="headerLink in headerLink" :key="headerLink.id">
-                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        {{ headerLink.title }}
-                    </a>
-            <ul class="dropdown-menu">
-                <li>
-                    <a class="dropdown-item" href="#">
-                        All Services
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#">
-                        Simple Product
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#">
-                        All playlist
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#">
-                        Dropdown
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#">
-                        All Playlist
-                    </a>
-                </li>
-            </ul>
-                </li>
-            </ul>
-            <form class="d-flex" role="search">
+                
+                    <!--Headerlink title-->
+                    <div class="collapse navbar-collapse" id="navbarScroll">
+                        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                            <li class="nav-item dropdown" v-for="headerLink in headerLink" :key="headerLink.id">
+                            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                {{ headerLink.title }}
+                            </a>
+                        
+                            <!--Dropdown menù-->
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        All Services
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        Simple Product
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        All playlist
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        Dropdown
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        All Playlist
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <!--Chiusura primo ul con li-->
+                            </li>
+                        </ul>
+            
+                <!--Form, bottone, input e icons-->
+                <form class="d-flex" role="search">
                 <li class="me-4">
                     <button>Schedule a workout</button>
                 </li>
@@ -115,7 +125,7 @@ export default {
                 </button>
             </form>
             <input :class="activeLens === false ? 'my-hidden' : 'my-visible'" type="text">
-            <span><i class="fa-solid fa-cart-shopping my-color"></i></span>
+            <span><i class="fa-solid fa-cart-shopping m-3 my-color"></i></span>
         </div>
     </div>
 </nav>
