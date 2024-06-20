@@ -1,5 +1,5 @@
 <script>
-import PlayButton from "./PlayButton.vue";
+import PlayButton from "../PlayButton.vue";
 import JumboContent from "./JumboContent.vue";
 import SingleCard from "./SingleCard.vue";
 import QuoteElement from "./QuoteElement.vue";
