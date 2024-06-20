@@ -8,44 +8,38 @@ export default {
                     id: 0,
                     title: "Home",
                     active: false,
-                    icons: false,
                     url: '#'
                 },
                 {
                     id: 1,
                     title: "Services",
                     active: true,
-                    icons: true,
                     url: '#'
                 },
                 {
                     id: 2,
                     title: "About",
                     active: true,
-                    icons: true,
                     url: '#'
                 },
                 {
                     id: 3,
                     title: "Videos",
                     active: true,
-                    icons: true,
                     url: '#'
                 },
                 {
                     id: 4,
                     title: "Blog",
                     active: false,
-                    icons: false,
                     url: '#'
                 },
                 {
                     id: 5,
                     title: "Store",
                     active: true,
-                    icons: true,
+                    new: true,
                     url: '#',
-                    new: true
                 },
             ],
         }
@@ -65,24 +59,26 @@ export default {
 </script>
 
 <template>
-    <header>
-
+    <header class="container-huge">
+        <div>
+            <img src="../images/logo-200x34.png" alt="">
+        </div>
+        
         <nav class="navbar navbar-expand-lg bg-body-tertiary my-bg-color p-4">
-            <img src="../images/logo-200x34.png" alt="Avada Fitness logo">
-                <!--Img e botton fluid a scomparsa-->
+                <!--botton fluid a scomparsa-->
                 <div class="container-fluid">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <!--Headerlink title-->
                     <div class="collapse navbar-collapse" id="navbarScroll">
-                        <ul v-for="headerLink in headerLink" :key="headerLink.id" class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                        <ul v-for="headerLink in headerLink" :key="headerLink.id" class="navbar-nav me-2 my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                             <li class="nav-item dropdown" >
                             <a class="nav-link dropdown-toggle text-white my-color-font-a" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <strong>{{ headerLink.title }}</strong> <span id="span-special" v-if="headerLink.new === true">new</span>
+                                <strong>{{ headerLink.title }} <span id="span-special" v-if="headerLink.new === true">new</span> <i class="fa-solid fa-chevron-down my-i-arrow" v-if="headerLink.active === true"></i></strong> 
                             </a>
                             <!--Dropdown menù-->
-                            <ul class="dropdown-menu my-bg-color">
+                            <ul class="dropdown-menu my-bg-color" v-if="headerLink.active === true">
                                 <li class="my-bg-li">
                                     <a class="dropdown-item my-hover-a" href="#">
                                         All Services
@@ -136,11 +132,25 @@ export default {
 @use '../style/partials/variables' as*;
 @use '../style/general.scss' as*;
 
+header{
+    display: flex;
+    align-items: center;
+    background-color: $bg_black;
+}
+
 #span-special{
     color: black;
     border-radius: .1rem;
     padding: .4rem;
     background-color: #fff941!important;
+}
+
+i.my-i-arrow{
+    font-size: .9rem;
+}
+
+.navbar .dropdown-toggle::after {
+    display: none;
 }
 
 // Dropdown menu
