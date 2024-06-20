@@ -5,9 +5,9 @@ export default {
 data() {
 return {
     CardData:[
-                { id: 0, title: 'Thighs & glute workout', image: '../images/video2-2x.jpg', link: 'Increase your mobility' },
-                { id: 1, title: 'Lift, firm & perk up', image: '../images/video7-2x.jpg', link: 'Feel young again' },
-                { id: 2, title: 'Slim & trim your waist', image: '../images/video9-2x.jpg', link: 'Shed those extra pounds' },
+                { id: 0, title: 'Thighs & glute workout', image: 'https://avada.website/fitness/wp-content/uploads/sites/130/2019/11/video2@2x.jpg', link: 'Increase your mobility' },
+                { id: 1, title: 'Lift, firm & perk up', image: 'https://avada.website/fitness/wp-content/uploads/sites/130/2019/11/video7@2x.jpg', link: 'Feel young again' },
+                { id: 2, title: 'Slim & trim your waist', image: 'https://avada.website/fitness/wp-content/uploads/sites/130/2019/12/video9@2x.jpg', link: 'Shed those extra pounds' },
                 
             ],
     ArticleData:[
@@ -38,15 +38,28 @@ return {
                 <button class="bottone btn btn-danger text-light">Visit my YouTube channel</button>
             </article>
         </div>
-        <div class="playlists d-flex col-5">
-            <article
-            v-for="item in CardData" :key="item.id"
-            >
-                <img :src="item.image" alt="" class="test">
-                <h3>{{ item.title }}</h3>
-                <a :href="item.link">{{ item.link }}</a>
-            </article>
+        <div class="playlists d-flex col-5 w-100 ">
+            <div class="video-up">
+                <h2>Feautred playlists</h2>
+            </div>
+            <div class="video-container">
+                <article class="video"
+                v-for="item in CardData" :key="item.id"
+                >
+                    <img :src="item.image" alt="" class="test">
+                    <h3>{{ item.title }}</h3>
+                    <a :href="item.link">{{ item.link }}</a>
+                </article>
+            </div>
         </div>
+    </div>
+    <div class="row">
+        <section class="up"></section>
+        <section class="low">
+            <article>
+
+            </article>
+        </section>
     </div>
 </div>
 
@@ -55,6 +68,19 @@ return {
 <style lang=
 scss
 scoped>
+.video-container{
+    width: 100%;
+    display: flex;
+}
+.video{
+    width: 100%;
+    img{
+        width: 100%;
+    }
+}
+.up{
+    background-image: url();
+}
 #service{
 }
 .artup{
