@@ -44,7 +44,7 @@ export default {
     <div class="bg-gradient">
         <div class="container-huge">
             <div class="wrapper">
-                <SingleCard v-for="(item, index) in articles" :key="index" :img="item.img" :title="item.title"
+                <SingleCard v-for="(item, index) in articles" :key="index" :img="item.img" :title="item.title" class="imgHover"
                     :description="item.description" />
             </div>
             <QuoteElement />
@@ -69,5 +69,13 @@ export default {
 .wrapper {
     display: flex;
     justify-content: space-between;
+}
+
+.imgHover{
+    transition: transform .35s;
+}
+
+.imgHover:hover{
+    transform: scale(1.1);
 }
 </style>
