@@ -23,20 +23,23 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../style/partials/variables' as*;
+@use '../style/partials/mixins' as*;
+
 a{
     text-decoration: none;
 
     &:hover{
-        color: #4154ff!important;
+        color: $color-blue!important;
     }
 }
 
 section.my-bg-color{
-    background-color: #060607;
+    background-color: $bg_black;
 }
 
 .my-color-grey{
-    color: #abaaad;
+    color: $color-grey;
 }
 
 </style>

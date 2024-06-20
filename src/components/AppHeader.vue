@@ -93,21 +93,24 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../style/partials/mixins' as*;
+@use '../style/partials/variables' as*;
+
     a{
         text-decoration: none;
     }
 
     nav.my-bg-color{
-        background-color: #060607;
+        background-color: $bg-black;
     }
 
     ul.my-color-li{
         li{
-            color: #757f8a;
+            color: $color-grey;
         }
 
         a{
-            color: #757f8a;
+            color: $color-grey;
 
             &:hover{
                 color: white;
@@ -118,8 +121,8 @@ export default {
     // Classi per funzionamento dell'input comparsa e scomparsa. NON inserire nello style generale scss
     button.my-lens{
         border: none;
-        background-color: #060607;
-        color: #757f8a;
+        background-color: $bg-black;
+        color: $color-grey;
 
         &:hover{
             color: white;

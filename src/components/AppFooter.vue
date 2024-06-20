@@ -112,9 +112,12 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../style/partials/mixins' as*;
+@use '../style/partials/variables' as*;
+
 .my-li-a-color-hover{
     &:hover{
-        color: #4154ff;
+        color: $color-blue;
     }
 }
 
@@ -128,7 +131,7 @@ footer{
 
 nav{
     padding: 10rem;
-    background-color: #060607;
+    background-color: $bg-black;
 
     li{
         color: white;
@@ -140,7 +143,7 @@ nav{
 }
 
 .my-color-grey{
-    color: #abaaad;
+    color: $color-grey;
 }
 
 .my-color-red{
