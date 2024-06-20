@@ -1,6 +1,77 @@
-@import "~@fortawesome/fontawesome-free/css/all.css";
+@use './partials/variables.scss' as *;
+
+button {
+    border: none;
+    border-radius: 50px !important;
+    padding: 1rem 1.5rem;
+    color: white;
+    background-color: #4154ff;
+}
+
+button.no-bg {
+    background-color: transparent;
+    border: 2px solid gray;
+}
 
 .container-huge {
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 0 auto;
+    color: white;
+}
+
+.red {
+    color: $red;
+}
+
+.yellow {
+    color: $yellow;
+}
+
+.gray {
+    color: $gray;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* Card Style */
+
+.single-card {
+    width: 30%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 5px 5px 40px 5px;
+    overflow: hidden;
+}
+
+.content-overlay {
+    color: white;
+    padding: 90% 10% 5%;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.897), transparent);
+
+    i {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-weight: bold;
+    }
+
+    p {
+        color: $yellow;
+        font-size: 1.7rem;
+    }
 }

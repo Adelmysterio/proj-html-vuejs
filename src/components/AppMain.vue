@@ -1,14 +1,16 @@
 <script>
-import AppAdelmo from "./AppAdelmo.vue";
+import JumboSection from "./jumbo/JumboSection.vue";
 import AppCiro from "./AppCiro.vue";
-import AppLorenz from "./AppLorenz.vue";
-import AppLuca from "./AppLuca.vue";
+import TrainingAndArticles from "./TrainingAndArticles.vue";
+import BannerAndSponsors from "./BannerAndSponsors.vue";
+import Events from "./Events.vue";
 export default {
     components: {
-        AppAdelmo,
+        JumboSection,
         AppCiro,
-        AppLorenz,
-        AppLuca
+        TrainingAndArticles,
+        BannerAndSponsors,
+        Events
 
     },
     data() {
@@ -20,10 +22,15 @@ export default {
 </script>
 
 <template>
-    <AppAdelmo />
-    <AppCiro />
-    <AppLorenz />
-    <AppLuca />
+    <main>
+        <JumboSection />
+        <AppCiro />
+        <TrainingAndArticles />
+        <Events />
+        <BannerAndSponsors />
+    </main>
 </template>
 
-<style lang=scss scoped></style>
+<style lang="scss" scoped>
+
+</style>
