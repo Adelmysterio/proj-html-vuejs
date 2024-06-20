@@ -35,4 +35,8 @@ article {
     top: -100px;
 }
 
+.single-card{
+    transition: transform .35s
+}
+
 </style>
