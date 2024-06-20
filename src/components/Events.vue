@@ -81,6 +81,7 @@ article.single-card {
     width: 100%;
     height: 700px;
     margin-bottom: 3rem;
+    transition: transform .35s;
 
     section {
         background: linear-gradient(to top, rgba(0, 0, 0, 0.699), transparent);
@@ -95,4 +96,9 @@ article.single-card {
         margin-bottom: 4rem;
     }
 }
+
+article.single-card:hover{
+    transform: scale(1.1);
+}
+
 </style>
