@@ -73,7 +73,7 @@ export default {
                     <!--Headerlink title-->
                     <div class="collapse navbar-collapse" id="navbarScroll">
                         <ul v-for="headerLink in headerLink" :key="headerLink.id" class="navbar-nav me-2 my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                            <li class="nav-item dropdown" >
+                            <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-white my-color-font-a" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <strong>{{ headerLink.title }} <span id="span-special" v-if="headerLink.new === true">new</span> <i class="fa-solid fa-chevron-down my-i-arrow" v-if="headerLink.active === true"></i></strong> 
                             </a>
@@ -111,14 +111,15 @@ export default {
                         </ul>
             
                 <!--Form, bottone, input e icons-->
-                <form class="d-flex" role="search">
+                <div class="d-flex" role="search">
                 <li class="me-4">
                     <button>Schedule a workout</button>
                 </li>
                 <button @click="invertInput()" class="my-lens my-display">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
-            </form>
+                </div>
+            
             <input :class="activeLens === false ? 'my-hidden' : 'my-visible'" type="text">
             <span><i class="fa-solid fa-cart-shopping m-3 my-color"></i></span>
         </div>
@@ -135,7 +136,12 @@ export default {
 header{
     display: flex;
     align-items: center;
+    justify-content: space-between;
     background-color: $bg_black;
+}
+
+li{
+    list-style: none;
 }
 
 #span-special{
