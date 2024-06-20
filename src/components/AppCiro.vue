@@ -38,7 +38,7 @@ return {
                 <button class="bottone btn btn-danger text-light">Visit my YouTube channel</button>
             </article>
         </div>
-        <div class="playlists d-flex col-5 w-100 ">
+        <div class="playlists d-flex col-5 w-100 flex-column">
             <div class="video-up">
                 <h2>Feautred playlists</h2>
             </div>
@@ -68,6 +68,7 @@ return {
 <style lang=
 scss
 scoped>
+
 .video-container{
     width: 100%;
     display: flex;
@@ -79,7 +80,10 @@ scoped>
     }
 }
 .up{
-    background-image: url();
+    width: 100%;
+    height: 200px;
+    background-position: center;
+    background-image: url(../images/banner1@2x.jpg);
 }
 #service{
 }
