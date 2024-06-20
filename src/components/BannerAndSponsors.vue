@@ -178,4 +178,8 @@ export default {
 .blue {
   color: blue;
 }
+
+.buy-avada button:hover{
+  background-color: #FF414B;
+}
 </style>
