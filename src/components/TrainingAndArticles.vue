@@ -11,14 +11,14 @@ data() {
 <template>
     <div>
         <div class="card-container">
-            <div class="card-wrapper  container-huge">
+            <div class="card-wrapper container-huge">
                 <div class="card-item">
                     <div class="card-content">
                         <i class="card-icon fas fa-stopwatch"></i>
                         <h4>
                             Team Training
                         </h4>
-                        <h5>
+                        <h5 class="mb-5">
                             Find a partner
                         </h5>
                         <p>
@@ -38,7 +38,7 @@ data() {
                         <h4>
                             Team Training
                         </h4>
-                        <h5>
+                        <h5 class="mb-5">
                             Find a partner
                         </h5>
                         <p>
@@ -58,7 +58,7 @@ data() {
                         <h4>
                             Team Training
                         </h4>
-                        <h5>
+                        <h5 class="mb-5">
                             Find a partner
                         </h5>
                         <p>
@@ -75,8 +75,8 @@ data() {
             </div>
         </div>
     </div>
-    <div class="articles-container">
-        <div class="container">
+    <div class="container-huge">
+        <div class="contenitore">
             <div class="articles-links">
                 <h2>Latest article</h2>
                 <div class="articles-readAll">
@@ -133,17 +133,22 @@ data() {
 .card-item{
     max-width: 30%;
     min-width: 250px;
-    height: 500px;
-    padding: 1rem;
+    height: 700px;
+    padding: 7rem 2rem;
     border: 3px solid #4154FF;
     border-radius: 10px;
-    margin: 1rem;
     text-align: center;
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     transition: all .2s ease-in-out;
+    h4,
+    h5 {
+        font-size: 2rem;
+        margin-bottom: .5rem;
+        font-weight: bold;
+    }
 }
 
 .card-item:hover {
@@ -151,14 +156,11 @@ data() {
 }
 
 .card-item p{
+    font-size: 1.2rem;
     color: #D5D4D7;
     font-weight: 600;
     align-items: center;
     margin-bottom: 2rem;
-}
-
-.card-content{
-    margin: 1rem;
 }
 
 .card-icon{
@@ -178,17 +180,21 @@ data() {
 }
 
 .card-wrapper{
-    margin-top: 100px;
-    padding-bottom: 100px;
+   padding: 3rem 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 h5{
     color: #FFF941;
 }
 ///////////////////////////////////////////////////////////////////////
+
+.contenitore {
+    color: black;
+    padding: 8rem 0;
+}
 
 .articles-container{
     width: 100%;
@@ -202,7 +208,7 @@ h5{
 .articles-links{
     display: flex;
     justify-content: space-between;
-    padding: 1rem;
+    padding-bottom: .6rem;
 }
 
 .articles-readAll {
@@ -226,7 +232,6 @@ h5{
 .articles{
     display: flex;
     justify-content: space-between;
-    padding: 1rem;
 }
 
 article{
@@ -239,5 +244,4 @@ article img{
     width: 100%;
     padding-bottom: 1rem;
 }
-
 </style>
