@@ -41,10 +41,11 @@ export default {
                 },
                 {
                     id: 5,
-                    title: "Store new",
+                    title: "Store",
                     active: true,
                     icons: true,
-                    url: '#'
+                    url: '#',
+                    new: true
                 },
             ],
         }
@@ -66,46 +67,44 @@ export default {
 <template>
     <header>
 
-        <nav class="navbar navbar-expand-lg bg-body-tertiary my-bg-color p-3 d-flex justify-content-center">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary my-bg-color p-4">
             <img src="../images/logo-200x34.png" alt="Avada Fitness logo">
                 <!--Img e botton fluid a scomparsa-->
                 <div class="container-fluid">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                
                     <!--Headerlink title-->
                     <div class="collapse navbar-collapse" id="navbarScroll">
-                        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                            <li class="nav-item dropdown" v-for="headerLink in headerLink" :key="headerLink.id">
-                            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                {{ headerLink.title }}
+                        <ul v-for="headerLink in headerLink" :key="headerLink.id" class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                            <li class="nav-item dropdown" >
+                            <a class="nav-link dropdown-toggle text-white my-color-font-a" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <strong>{{ headerLink.title }}</strong> <span id="span-special" v-if="headerLink.new === true">new</span>
                             </a>
-                        
                             <!--Dropdown menù-->
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a class="dropdown-item" href="#">
+                            <ul class="dropdown-menu my-bg-color">
+                                <li class="my-bg-li">
+                                    <a class="dropdown-item my-hover-a" href="#">
                                         All Services
                                     </a>
                                 </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">
+                                <li class="my-bg-li">
+                                    <a class="dropdown-item my-hover-a" href="#">
                                         Simple Product
                                     </a>
                                 </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">
+                                <li class="my-bg-li">
+                                    <a class="dropdown-item my-hover-a" href="#">
                                         All playlist
                                     </a>
                                 </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">
+                                <li class="my-bg-li">
+                                    <a class="dropdown-item my-hover-a" href="#">
                                         Dropdown
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="#">
+                                    <a class="dropdown-item my-hover-a" href="#">
                                         All Playlist
                                     </a>
                                 </li>
@@ -137,24 +136,40 @@ export default {
 @use '../style/partials/variables' as*;
 @use '../style/general.scss' as*;
 
+#span-special{
+    color: black;
+    border-radius: .1rem;
+    padding: .4rem;
+    background-color: #fff941!important;
+}
+
+// Dropdown menu
+ul.my.my-bg-color{
+    background-color: $bg_black;
+}
+
 .my-bg-color {
     background-color: $bg-black!important;
 }
 
-ul.my-color-li {
-    li {
-        color: $color-grey;
-    }
+a.my-color-font-a {
+    font-size: 1.15rem;
+    color: $color-grey!important;
 
-    a {
-        color: $color-grey;
-
-        &:hover {
-            color: white;
-        }
+    &:hover {
+        color: white!important;
     }
 }
 
+a.my-hover-a{
+    color: white;
+
+    &:hover{
+        background-color: #4154ff!important;
+    }
+}
+
+// Button lens
 button.my-lens {
     border: none;
     background-color: $bg-black;
@@ -165,6 +180,7 @@ button.my-lens {
     }
 }
 
+// Input
 input.my-hidden {
     display: none;
 }
