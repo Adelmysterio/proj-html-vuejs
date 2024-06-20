@@ -28,34 +28,6 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use '../../style/partials/variables.scss' as *;
+@use '../style/partials/variables.scss' as *;
 
-.single-card {
-    width: 30%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 5px 5px 40px 5px;
-    overflow: hidden;
-    position: relative;
-    top: -100px;
-}
-
-.content-overlay {
-    color: white;
-    padding: 90% 10% 5%;
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.897), transparent);
-
-    i {
-        font-size: 1.5rem;
-    }
-
-    h2 {
-        font-weight: bold;
-    }
-
-    p {
-        color: $yellow;
-        font-size: 1.7rem;
-    }
-}
 </style>

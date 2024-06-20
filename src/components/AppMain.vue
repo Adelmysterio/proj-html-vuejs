@@ -3,12 +3,14 @@ import JumboSection from "./jumbo/JumboSection.vue";
 import AppCiro from "./AppCiro.vue";
 import TrainingAndArticles from "./TrainingAndArticles.vue";
 import BannerAndSponsors from "./BannerAndSponsors.vue";
+import Events from "./Events.vue";
 export default {
     components: {
         JumboSection,
         AppCiro,
         TrainingAndArticles,
-        BannerAndSponsors
+        BannerAndSponsors,
+        Events
 
     },
     data() {
@@ -24,6 +26,7 @@ export default {
         <JumboSection />
         <AppCiro />
         <TrainingAndArticles />
+        <Events />
         <BannerAndSponsors />
     </main>
 </template>
