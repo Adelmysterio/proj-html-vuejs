@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (rect.top <= (window.innerHeight || document.documentElement.clientHeight) && rect.bottom >= 0){
                 setTimeout(() =>{
                     element.classList.add('visible-scroll');
-                }, 200);
+                }, 400);
                 
             }
         });
