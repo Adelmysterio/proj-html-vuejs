@@ -11,8 +11,8 @@ data() {
 <template>
     <div>
         <div class="card-container">
-            <div class="card-wrapper">
-                <div class="card-item container-huge">
+            <div class="card-wrapper  container-huge">
+                <div class="card-item">
                     <div class="card-content">
                         <i class="card-icon fas fa-stopwatch"></i>
                         <h4>
