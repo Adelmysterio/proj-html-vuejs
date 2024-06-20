@@ -9,7 +9,6 @@ data() {
 </script>
 
 <template>
-    <div>
         <div class="card-container">
             <div class="card-wrapper  container-huge">
                 <div class="card-item">
@@ -74,9 +73,8 @@ data() {
                 </div>
             </div>
         </div>
-    </div>
     <div class="articles-container">
-        <div class="container">
+        <div class="container-huge">
             <div class="articles-links">
                 <h2>Latest article</h2>
                 <div class="articles-readAll">
@@ -178,8 +176,6 @@ data() {
 }
 
 .card-wrapper{
-    margin-top: 100px;
-    padding-bottom: 100px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

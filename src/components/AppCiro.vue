@@ -21,7 +21,7 @@ return {
     ArticleCard:[
                 { 
                 id: 0,
-                icon: 'fa-regular fa-stopwatch-20',
+                icon: 'fas fa-stopwatch-20',
                 title: 'Team training',
                 ywtitle:'Find a partner',
                 text: 'Vestibulum, curabitur eu sem nibh ultrices sit nulla adipiscing. Nisl sit fames amet senectus eget sed duis vehicula. Tristique.', 
@@ -29,7 +29,7 @@ return {
             },
                 {
                 id: 1,
-                icon: 'fa-regular fa-dumbbell',
+                icon: 'fas fa-dumbbell',
                 title: 'Crossfit workout',
                 ywtitle:'Push your limits',
                 text: 'Vestibulum, curabitur eu sem nibh ultrices sit nulla adipiscing. Nisl sit fames amet senectus eget sed duis vehicula. Tristique.', 
@@ -37,7 +37,7 @@ return {
             },
                 {
                 id: 2,
-                icon: 'fa-regular fa-hotdog',
+                icon: 'fas fa-hotdog',
                 title: 'Weight loss plant',
                 ywtitle:'Shed those pounds',
                 text: 'At laoreet senectus volutpat diam vel sed sed amet pellentesque. Lobortis ut aliquam risus purus. A tellus ut etiam.', 
