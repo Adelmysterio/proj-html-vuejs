@@ -20,10 +20,12 @@ export default {
 </script>
 
 <template>
-    <AppAdelmo />
-    <AppCiro />
-    <AppLorenz />
-    <AppLuca />
+    <main>
+        <AppAdelmo />
+        <AppCiro />
+        <AppLorenz />
+        <AppLuca />
+    </main>
 </template>
 
 <style lang=scss scoped></style>
