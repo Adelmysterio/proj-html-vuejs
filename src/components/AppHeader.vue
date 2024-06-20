@@ -8,32 +8,37 @@ export default {
                     id: 1,
                     title: "Home",
                     active: false,
+                    icons: false,
                     url: '#'
                 },
                 {
                     id: 2,
                     title: "Services",
                     active: false,
+                    icons: true,
                     url: '#'
                 },
                 {
                     id: 3,
                     title: "About",
                     active: false,
+                    icons: true,
                     url: '#'
                 },
                 {
                     id: 4,
                     title: "Blog",
                     active: false,
+                    icons: false,
                     url: '#'
                 },
                 {
                     id: 5,
                     title: "Store",
                     active: false,
+                    icons: true,
                     url: '#'
-                }
+                },
             ],
         }
     },
@@ -62,22 +67,19 @@ export default {
 
                 <!--Header link gestiti dinamicamente-->
                 <li class="me-4" v-for="headerLink in headerLink" :key="headerLink.id">
-                    <a href="">{{ headerLink.title }}</a>
+                    <a href="">{{ headerLink.title }}</a> <i class="fa-solid fa-chevron-down"></i>
                 </li>
-
-                <li>
-
-                </li>
-
+                <!--:class="headerLink.icons ==="-->
                 <!--Button search-->
                 <li class="me-4">
                     <button>Schedule a workout</button>
                 </li>
 
                 <!--Button lens-->
-                <li class="me-4">
-                    <button @click="invertInput()" class="my-lens my-display"><i
-                            class="fa-solid fa-magnifying-glass"></i></button>
+                <li class="me-4 d-flex align-items-center">
+                    <button @click="invertInput()" class="my-lens my-display">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
                     <input :class="activeLens === false ? 'my-hidden' : 'my-visible'" type="text">
                 </li>
 
@@ -138,5 +140,10 @@ input.my-hidden {
 
 input.my-visible {
     display: inline-block;
+}
+
+input{
+    border-radius: 1rem;
+    width: 200px;
 }
 </style>

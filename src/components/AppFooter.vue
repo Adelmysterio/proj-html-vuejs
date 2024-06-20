@@ -45,7 +45,7 @@ export default {
 
 <template>
     <footer>
-        <nav class="d-flex justify-content-evenly text-center">
+        <nav class="d-flex justify-content-between text-center">
             <!--AVADA FITNESS SOCIAL-->
             <ul>
 
@@ -54,11 +54,10 @@ export default {
                     <img src="../images/logo-200x34.png" alt="Avada Fitness logo">
                 </li>
                 <li>
-                    <p class="my-color-grey">
+                    <p class="my-color-grey mb-5">
                         Ac aliquam neque sagittis diam faubicus vitae<br> purus turpis phasellus. Pellentesque consectetur<br> amet purus ultrices mauris.
                     </p>
                 </li>
-
                 <!--link social-->
                 <li>
                     <a href="https://www.facebook.com/?locale=it_IT"><i class="fa-brands fa-facebook-f me-3 my-color-red"></i></a>
@@ -76,7 +75,7 @@ export default {
                         Recent posts
                     </h6>
                 </li>
-                <li class="mb-2 my-li-a-color-hover" v-for="footerLink in footerLink" :key="footerLink.id">
+                <li class="mb-4 my-li-a-color-hover" v-for="footerLink in footerLink" :key="footerLink.id">
                     <i class="fa-solid fa-chevron-right me-1"></i>
                     <a class="my-li-a-color-hover" href="">{{ footerLink.textTitle }}</a>
                 </li>
@@ -85,12 +84,12 @@ export default {
             <!--INFORMATIONS-->
             <ul>
                 <li>
-                    <h6 class="mb-3">
+                    <h6 class="mb-4">
                         Contact informations
                     </h6>
                 </li>
                 <!--indirizzo-->
-                <li class="mb-2 my-color-grey">
+                <li class="mb-3 my-color-grey">
                     476 Tipple Road Michigan 48449
                 </li>
                 <!--contacts-->
@@ -114,6 +113,10 @@ export default {
 <style lang="scss" scoped>
 @use '../style/partials/mixins' as*;
 @use '../style/partials/variables' as*;
+
+footer{
+    font-size: 1.1rem;
+}
 
 .my-li-a-color-hover{
     &:hover{
