@@ -86,40 +86,16 @@ export default {
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle text-white my-color-font-a" href="#" role="button"
                                     data-bs-toggle="dropdown" aria-expanded="false">
-                                    <strong>{{ item.title }} <span id="span-special"
-                                            v-if="item.new === true">new</span> <i
-                                            class="fa-solid fa-chevron-down my-i-arrow"
+                                    <strong>{{ item.title }} <span id="span-special" v-if="item.new === true">new</span>
+                                        <i class="fa-solid fa-chevron-down my-i-arrow"
                                             v-if="item.active === true"></i></strong>
                                 </a>
                                 <!--Dropdown menù-->
                                 <ul class="dropdown-menu my-bg-color" v-if="item.active === true">
-                                    <li class="my-bg-li">
-                                        <a class="dropdown-item my-hover-a" href="#">
-                                            All Services
-                                        </a>
-                                    </li>
-                                    <li class="my-bg-li">
-                                        <a class="dropdown-item my-hover-a" href="#">
-                                            Simple Product
-                                        </a>
-                                    </li>
-                                    <li class="my-bg-li">
-                                        <a class="dropdown-item my-hover-a" href="#">
-                                            All playlist
-                                        </a>
-                                    </li>
-                                    <li class="my-bg-li">
-                                        <a class="dropdown-item my-hover-a" href="#">
-                                            Dropdown
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item my-hover-a" href="#">
-                                            All Playlist
-                                        </a>
+                                    <li v-for="(link, index) in item.dropdown" :key="index">
+                                        {{ link }}
                                     </li>
                                 </ul>
-
                                 <!--Chiusura primo ul con li-->
                             </li>
                         </ul>
@@ -172,8 +148,18 @@ i.my-i-arrow {
 }
 
 // Dropdown menu
-ul.my.my-bg-color {
+ul.my-bg-color {
     background-color: $bg_black;
+
+    li {
+        color: $gray;
+        padding-left: .5rem;
+        cursor: pointer;
+
+        &:hover {
+            color: white;
+        }
+    }
 }
 
 .my-bg-color {
