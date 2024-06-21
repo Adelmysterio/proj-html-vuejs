@@ -14,19 +14,24 @@ export default {
                     id: 1,
                     title: "Services",
                     active: true,
-                    url: '#'
+                    url: '#',
+                    dropdown: [
+                        'All Services', 'Service Single Page'
+                    ]
                 },
                 {
                     id: 2,
                     title: "About",
                     active: true,
-                    url: '#'
+                    url: '#',
+                    dropdown: ['About me', 'Our Sponsors', 'Contact']
                 },
                 {
                     id: 3,
                     title: "Videos",
                     active: true,
-                    url: '#'
+                    url: '#',
+                    dropdown: ['All Playlist', 'Playlist Page', 'Video Single Page']
                 },
                 {
                     id: 4,
@@ -40,6 +45,7 @@ export default {
                     active: true,
                     new: true,
                     url: '#',
+                    dropdown: ['Simple Product', 'Variable Group']
                 },
             ],
         }
@@ -65,7 +71,7 @@ export default {
                 <img src="../images/logo-200x34.png" alt="">
             </div>
 
-            <nav class="navbar navbar-expand-lg bg-body-tertiary my-bg-color py-4">
+            <nav class="navbar navbar-expand-lg py-4">
                 <!--botton fluid a scomparsa-->
                 <div class="container-fluid">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -75,18 +81,18 @@ export default {
                     </button>
                     <!--Headerlink title-->
                     <div class="collapse navbar-collapse" id="navbarScroll">
-                        <ul v-for="headerLink in headerLink" :key="headerLink.id"
+                        <ul v-for="item in headerLink" :key="item.id"
                             class="navbar-nav me-2 my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle text-white my-color-font-a" href="#" role="button"
                                     data-bs-toggle="dropdown" aria-expanded="false">
-                                    <strong>{{ headerLink.title }} <span id="span-special"
-                                            v-if="headerLink.new === true">new</span> <i
+                                    <strong>{{ item.title }} <span id="span-special"
+                                            v-if="item.new === true">new</span> <i
                                             class="fa-solid fa-chevron-down my-i-arrow"
-                                            v-if="headerLink.active === true"></i></strong>
+                                            v-if="item.active === true"></i></strong>
                                 </a>
                                 <!--Dropdown menù-->
-                                <ul class="dropdown-menu my-bg-color" v-if="headerLink.active === true">
+                                <ul class="dropdown-menu my-bg-color" v-if="item.active === true">
                                     <li class="my-bg-li">
                                         <a class="dropdown-item my-hover-a" href="#">
                                             All Services
