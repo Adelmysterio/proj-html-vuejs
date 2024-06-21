@@ -6,6 +6,10 @@ button {
     padding: 1rem 1.5rem;
     color: white;
     background-color: #4154ff;
+    background-color: #4154ff;
+    &:hover {
+        background-color: #ff414b;
+    }
 }
 
 button.no-bg {
@@ -28,5 +32,50 @@ button.no-bg {
 }
 
 .gray {
-    color: $gray;
+    color: $gray !important; 
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* Card Style */
+
+.single-card {
+    width: 30%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 5px 5px 40px 5px;
+    overflow: hidden;
+}
+
+.content-overlay {
+    color: white;
+    padding: 90% 10% 5%;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.897), transparent);
+
+    i {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-weight: bold;
+    }
+
+    p {
+        color: $yellow;
+        font-size: 1.7rem;
+    }
 }

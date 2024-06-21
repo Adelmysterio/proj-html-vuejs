@@ -1,14 +1,18 @@
 <script>
-import AppAdelmo from "./ade_section/AppAdelmo.vue";
-import AppCiro from "./AppCiro.vue";
-import AppLorenz from "./AppLorenz.vue";
-import AppLuca from "./AppLuca.vue";
+import JumboSection from "./jumbo/JumboSection.vue";
+import VideoAndCallToAction from "./VideoAndCallToAction.vue";
+import TrainingAndArticles from "./TrainingAndArticles.vue";
+import BannerAndSponsors from "./BannerAndSponsors.vue";
+import Events from "./Events.vue";
+import FloatingButtons from "./FloatingButtons.vue";
 export default {
     components: {
-        AppAdelmo,
-        AppCiro,
-        AppLorenz,
-        AppLuca
+        JumboSection,
+        VideoAndCallToAction,
+        TrainingAndArticles,
+        BannerAndSponsors,
+        Events,
+        FloatingButtons,
 
     },
     data() {
@@ -21,11 +25,16 @@ export default {
 
 <template>
     <main>
-        <AppAdelmo />
-        <AppCiro />
-        <AppLorenz />
-        <AppLuca />
+        <JumboSection />
+        <VideoAndCallToAction />
+        <TrainingAndArticles />
+        <FloatingButtons />
+        <Events />
+        <BannerAndSponsors />
     </main>
 </template>
 
-<style lang=scss scoped></style>
+<style lang="scss" scoped>
+
+
+</style>

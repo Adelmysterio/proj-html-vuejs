@@ -14,8 +14,8 @@ export default {
         <h1>Take control of your health</h1>
         <i class="fa-solid fa-stairs fa-rotate-by yellow" style="--fa-rotate-angle: 45deg;"></i>
         <p class="gray">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-        <button><i class="fa-brands fa-youtube"></i> Visit my YouTube channel</button>
-        <button class="no-bg">Buy Avada today <i class="fa-solid fa-arrow-right"></i></button>
+        <button class="youtube"><i class="fa-brands fa-youtube"></i> Visit my YouTube channel</button>
+        <button class="no-bg avada">Buy Avada today <i class="fa-solid fa-arrow-right"></i></button>
     </section>
 </template>
 
@@ -43,6 +43,15 @@ section {
     button {
         margin-right: 1rem;
         margin-top: 2rem;
+    }
+
+    button.youtube:hover{
+        background-color: #FF414B;
+    }
+
+    button.avada:hover{
+        color: black;
+        background-color: #FFFFFF;
     }
 }
 
