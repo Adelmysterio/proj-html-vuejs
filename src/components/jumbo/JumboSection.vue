@@ -28,26 +28,54 @@ export default {
                     title: 'Team training',
                     description: 'Find a partner',
                 },
-            ]
+            ],
         }
-    }
+    },
 }
+document.addEventListener("DOMContentLoaded", function () {
+    const hiddenElements = document.querySelectorAll('.hidden');
+    setTimeout(() => {
+        hiddenElements.forEach((element, index) => {
+            setTimeout(() => {
+                element.classList.add('visible');
+            }, index * 200);
+        });
+    }, 100);
+
+    const scrollElements = document.querySelectorAll('.hidden-scroll');
+    const checkVisibility = () => {
+        scrollElements.forEach((element) => {
+            const rect = element.getBoundingClientRect();
+            if (rect.top <= (window.innerHeight || document.documentElement.clientHeight) && rect.bottom >= 0){
+                setTimeout(() =>{
+                    element.classList.add('visible-scroll');
+                }, 200);
+                
+            }
+        });
+    };
+    window.addEventListener('scroll', checkVisibility);
+    
+    
+    checkVisibility();
+});
+
 </script>
 
 <template>
     <div class="bg-img d-flex">
         <div class="container-huge d-flex align-items-center justify-content-between w-75">
-            <JumboContent />
-            <PlayButton />
+                <JumboContent class="hidden"/>
+                <PlayButton class="hidden"/>
         </div>
     </div>
     <div class="bg-gradient">
         <div class="container-huge">
             <div class="wrapper">
-                <SingleCard v-for="(item, index) in articles" :key="index" :img="item.img" :title="item.title" class="imgHover"
+                <SingleCard v-for="(item, index) in articles" :key="index" :img="item.img" :title="item.title" class="single-card hidden-scroll"
                     :description="item.description" />
             </div>
-            <QuoteElement />
+            <QuoteElement class="hidden-scroll" />
         </div>
     </div>
 </template>
@@ -71,11 +99,38 @@ export default {
     justify-content: space-between;
 }
 
-.imgHover{
+/**  Animations  */
+
+
+.single-card {
     transition: transform .35s;
 }
 
-.imgHover:hover{
+.single-card:hover {
     transform: scale(1.1);
 }
+
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1.5s ease, transform 1.5s ease;;
+}
+
+.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.hidden-scroll {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.visible-scroll {
+    opacity: 1;
+    visibility: visible;
+}
+
 </style>
