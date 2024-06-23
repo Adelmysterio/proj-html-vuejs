@@ -64,6 +64,7 @@
     color: rgb(70, 70, 70);
     cursor: pointer;
     overflow: hidden; 
+    z-index: 1;
 
     i {
         padding-top: 2px;
@@ -75,6 +76,8 @@
     p {
         margin-bottom: 0;
         margin-top: 6px;
+        font-weight: 600;
+        font-size: .8rem;
     }
 }
 

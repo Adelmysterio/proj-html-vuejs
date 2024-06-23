@@ -89,17 +89,32 @@ h2 {
     font-size: 4rem;
     margin: 0 auto;
     padding: 4rem 0;
+    order: -2;
 }
 
 .event {
     width: 30%;
+
+    &:last-child {
+        width: 100%;
+        order: -1;
+
+        article {
+            background-position: center;
+            section {
+                padding: 20% 10% 30%;
+                text-align: right;
+            }
+        }
+    }
 }
 
 article.single-card {
     width: 100%;
     height: 700px;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
     transition: transform .35s;
+    
 
     section {
         background: linear-gradient(to top, rgba(0, 0, 0, 0.699), transparent);
