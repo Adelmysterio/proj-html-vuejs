@@ -60,9 +60,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 <article :style="{ backgroundImage: 'url(' + event.image + ')' }" class="single-card ">
                     <section>
                         <h3>{{ event.event_name }}</h3>
-                        <p>{{ event.location }}</p>
-                        <p>From {{ event.start_date }} to {{ event.end_date }}</p>
                         <p>{{ event.type }}</p>
+                        <p>{{ event.location }}</p>
+                        <p>Dal {{ event.start_date }} al {{ event.end_date }}</p>
                     </section>
                 </article>
             </div>
@@ -95,6 +95,11 @@ h2 {
 .event {
     width: 30%;
 
+    &:nth-child(10) h3,
+    &:nth-child(3) h3{
+        margin-bottom: 1.5rem;
+    }
+
     &:last-child {
         width: 100%;
         order: -1;
@@ -120,14 +125,16 @@ article.single-card {
         background: linear-gradient(to top, rgba(0, 0, 0, 0.699), transparent);
         padding: 90% 10% 20%;
         margin: 0;
+        h3 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: $yellow;
+            margin-bottom: 4rem;
+            
+        }
+
     }
 
-    h3 {
-        font-size: 2rem;
-        font-weight: bold;
-        color: $yellow;
-        margin-bottom: 4rem;
-    }
 }
 
 article.single-card:hover{
