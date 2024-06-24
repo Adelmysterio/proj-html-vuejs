@@ -20,22 +20,22 @@
 
 @keyframes moveLeftRight {
     0% {
-        transform: translateX(0);
+        transform: translateX(0px);
         opacity: 1;
     }
     50% {
-        transform: translateX(-70px);
+        transform: translateX(70px);
         opacity: 1;
     }
     0% {
-        transform: translateX(70px);
+        transform: translateX(0px);
         opacity: 1;
     }
 }
 
 @keyframes moveRightLeft {
     0% {
-        transform: translateX(70px);
+        transform: translateX(0px);
         opacity: 1;
     }
     50% {
