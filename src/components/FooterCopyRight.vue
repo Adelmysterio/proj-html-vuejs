@@ -16,7 +16,7 @@ export default {
     <footer>
         <section class="p-4 text-center border-top my-bg-color">
             <p class="my-color-grey">
-                Copyright 2012 - 2020|Avada theme by <a class="text-white">ThemeFusion</a>|All rights reserved|Powered by <a class="text-white">WordPress</a>
+                Copyright 2012 - 2024 | Avada theme by <a class="text-white">ThemeFusion</a> | All rights reserved | Powered by <a class="text-white">WordPress</a>
             </p>
         </section>
     </footer>
