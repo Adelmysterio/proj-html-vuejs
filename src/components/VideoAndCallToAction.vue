@@ -212,6 +212,9 @@ button.bg-red {
     width: fit-content;
     font-size: 1.2rem;
     font-weight: bold;
+    &:hover {
+        background-color: rgb(255, 101, 101);
+    }
 }
 
 a {
