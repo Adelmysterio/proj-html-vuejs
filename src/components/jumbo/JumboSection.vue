@@ -63,8 +63,8 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 <template>
-    <div class="bg-img d-flex">
-        <div class="container-huge d-flex align-items-center justify-content-between w-75">
+    <div class="bg-img">
+        <div class="jumbo-container container-huge d-flex align-items-center justify-content-between">
                 <JumboContent class="hidden"/>
                 <PlayButton class="hidden"/>
         </div>
@@ -97,6 +97,10 @@ document.addEventListener("DOMContentLoaded", function () {
 .wrapper {
     display: flex;
     justify-content: space-between;
+}
+
+.jumbo-container>*:last-child {
+margin-right: 10rem;
 }
 
 /**  Animations  */
