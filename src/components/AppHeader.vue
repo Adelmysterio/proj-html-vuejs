@@ -92,7 +92,7 @@ export default {
                                 </a>
                                 <!--Dropdown menù-->
                                 <ul class="dropdown-menu my-bg-color" v-if="item.active === true">
-                                    <li v-for="(link, index) in item.dropdown" :key="index">
+                                    <li class="my-li-color" v-for="(link, index) in item.dropdown" :key="index">
                                         {{ link }}
                                     </li>
                                 </ul>
@@ -164,6 +164,13 @@ ul.my-bg-color {
 
 .my-bg-color {
     background-color: $bg-black !important;
+}
+
+li.my-li-color{
+    &:hover{
+        background-color: #4154ff;
+    }
+    
 }
 
 a.my-color-font-a {
