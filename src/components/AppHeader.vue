@@ -149,28 +149,18 @@ i.my-i-arrow {
 
 // Dropdown menu
 ul.my-bg-color {
-    background-color: $bg_black;
+    background-color: $bg_black !important;
 
-    li {
+    li.my-li-color {
         color: $gray;
         padding-left: .5rem;
         cursor: pointer;
 
         &:hover {
             color: white;
+            background-color: #4154ff;
         }
     }
-}
-
-.my-bg-color {
-    background-color: $bg-black !important;
-}
-
-li.my-li-color{
-    &:hover{
-        background-color: #4154ff;
-    }
-    
 }
 
 a.my-color-font-a {
