@@ -246,6 +246,10 @@ h5{
     
 }
 
+.read-more{
+    padding-right: .5rem;
+}
+
 .articles{
     display: flex;
     justify-content: space-between;
