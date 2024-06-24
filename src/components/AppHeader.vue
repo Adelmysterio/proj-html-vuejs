@@ -137,6 +137,7 @@ li {
     border-radius: .1rem;
     padding: .4rem;
     background-color: #fff941 !important;
+    margin-right: .5rem;
 }
 
 i.my-i-arrow {
