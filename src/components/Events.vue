@@ -10,7 +10,7 @@ export default {
     methods: {
         getEvents() {
 
-            axios.get('http://152.89.170.170:3000/events/fitness')
+            axios.get('')
                 .then((response) => {
                     // handle success
                     console.log(response.data);
