@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <p class="text-danger">Join our mailing list today</p>
                     <h3 class="">Insider offers & flash sales in your inbox every week</h3>
                     <div class="form ">
-                        <input type="email" placeholder="insert your email....*" class="">
+                        <input type="email" placeholder="Insert your email....*" class="">
                         <button class="sub btn btn-primary "> Subscribe</button>
                     </div>
                     <p class="gray">Curabitur non nulla sit amet nisl tempus convallis quis ac lectus dolor sit amet,
